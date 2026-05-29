@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+import FooterComponent from '@/common/components/FooterComponent.vue';
+import HeaderComponent from '@/common/components/HeaderComponent.vue';
 </script>
 
 <template>
-  <RouterView />
+  <div class="d-flex flex-column min-vh-100">
+    <HeaderComponent />
+    <main class="flex-grow-1">
+      <div class="container py-4">
+        <RouterView />
+      </div>
+    </main>
+    <FooterComponent />
+  </div>
 </template>
 
 <style scoped>
